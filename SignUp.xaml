@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:ShoppingCart"
+                xmlns:models="clr-namespace:ShoppingCart.Models"
+            x:Class="ShoppingCart.SignUp" x:DataType="local:SignUp">
+
+    <VerticalStackLayout >
+        <Label 
+        Text="Profile Information"
+        VerticalOptions="Start" 
+        HorizontalOptions="Center"
+            FontAttributes="Bold"
+            FontSize="18"
+            Margin="0,0,0,0" />
+        <Label x:Name="Editlabel" Text="Edit Profile:" FontAttributes="Bold"  HorizontalOptions="Center" IsVisible="false"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="NameLabel" Text="Name" Grid.Row="1" FontAttributes="Bold" IsVisible="false" />
+            <Entry x:Name="NameEntry" Text="{Binding CurrentClient.ClientName}"  Grid.Row="2" IsVisible="false" />
+
+            <Label x:Name="SurnameLabel" Text="Surname"  Grid.Row="3" HorizontalOptions="Start" FontAttributes="Bold" IsVisible="false"/>
+            <Entry x:Name="SurnameEntry" Text="{Binding CurrentClient.ClientSurname}"  Grid.Row="4" IsVisible="false"/>
+
+            <Label x:Name="EmailLabel" Text="Email"  Grid.Row="5" HorizontalOptions="Start" FontAttributes="Bold" IsVisible="false"/>
+            <Entry x:Name="EmailEntry" Text="{Binding CurrentClient.ClientEmail}"  Grid.Row="6" IsVisible="false"/>
+
+            
+        </Grid>
+
+        <Button x:Name="SaveButton" Clicked="SavePage" Text="Save" IsVisible="false"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+          
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="ProfileNameLabel" Text="Name" Grid.Row="1" FontAttributes="Bold" IsVisible="true"/>
+            <Label x:Name="ProfileNameEntry" Text="{Binding CurrentClient.ClientName}"  Grid.Row="2" IsVisible="true"/>
+
+            <Label x:Name="ProfileSurnameLabel" Text="Surname"  Grid.Row="3" HorizontalOptions="Start" FontAttributes="Bold" IsVisible="true"/>
+            <Label x:Name="ProfileSurnameEntry" Text="{Binding CurrentClient.ClientSurname}"  Grid.Row="4" IsVisible="true"/>
+
+            <Label x:Name="ProfileEmailLabel" Text="Email"  Grid.Row="5" HorizontalOptions="Start" FontAttributes="Bold" IsVisible="true"/>
+            <Label x:Name="ProfileEmailEntry" Text="{Binding CurrentClient.ClientEmail}"  Grid.Row="6" IsVisible="true"/>
+
+        </Grid>
+        <Button x:Name="EditButton" Text="Edit Profile" Clicked="edit_profile" IsVisible="true" />
+
+    </VerticalStackLayout>
+     
+</ContentPage>
