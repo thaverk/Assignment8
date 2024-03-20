@@ -20,9 +20,16 @@
         <Tab Title="Cart">
 
             <ShellContent
+<<<<<<< HEAD
              Title="Cart"
              ContentTemplate="{DataTemplate local:ShoppingCart}"
               Route="ShoppingCart" />
+=======
+     Title="Cart"
+     ContentTemplate="{DataTemplate local:ShoppingCart}"
+      Route="ShoppingCart" />
+
+>>>>>>> 1bfc197c3e0344d4358791fd63677fb1c9271785
         </Tab>
 
         <Tab Title="MainPage">
@@ -30,12 +37,17 @@
             <ShellContent
             Title="Home"
             ContentTemplate="{DataTemplate local:MainPage}"
+<<<<<<< HEAD
              Route="MainPage" />
             
             <ShellContent
      Title="Gaming Headphones"
      ContentTemplate="{DataTemplate local:HeadphonesPage}"
       Route="Headphones" />       
+=======
+             Route="MainPage" />        
+
+>>>>>>> 1bfc197c3e0344d4358791fd63677fb1c9271785
         </Tab>
 
 

@@ -31,21 +31,31 @@ namespace ShoppingCart.Services
         {
             _dbconnection = new SQLiteConnection(GetDatabasePath());
             _dbconnection.CreateTable<Client>();
+<<<<<<< HEAD
             _dbconnection.CreateTable<GamingHeadphones>();
+=======
+>>>>>>> 1bfc197c3e0344d4358791fd63677fb1c9271785
             SeedDatabase();
         }
 
 
 
+<<<<<<< HEAD
         public void SeedClient()
         {
             if (_dbconnection.Table<Client>().Count() == 0)
+=======
+        public void SeedDatabase() 
+        {
+         if (_dbconnection.Table<Client>().Count()==0) 
+>>>>>>> 1bfc197c3e0344d4358791fd63677fb1c9271785
             {
                 Client client = new Client()
                 {
                     ClientName = "",
                     ClientSurname = "",
                     ClientEmail = "",
+<<<<<<< HEAD
 
                 };
                 _dbconnection.Insert(client);
@@ -96,6 +106,15 @@ namespace ShoppingCart.Services
         {
             _dbconnection.Insert(headphones);
         }
+=======
+                   
+                 };
+            _dbconnection.Insert(client);
+            }
+        
+        }
+
+>>>>>>> 1bfc197c3e0344d4358791fd63677fb1c9271785
         public Client GetClientById(int id)
         {
             Client client = _dbconnection.Table<Client>().Where(x => x.ClientId == id).FirstOrDefault();
@@ -108,7 +127,11 @@ namespace ShoppingCart.Services
 
         public void UpdateClient(Client client)
         {
+<<<<<<< HEAD
             SeedClient(); 
+=======
+            SeedDatabase(); 
+>>>>>>> 1bfc197c3e0344d4358791fd63677fb1c9271785
             _dbconnection.Update(client);
         }
 
@@ -118,12 +141,17 @@ namespace ShoppingCart.Services
             _dbconnection.Insert(client);
 
         }
+<<<<<<< HEAD
 
        public List<GamingHeadphones> GetGamingHeadphones() 
         {
 
             return _dbconnection.Table<GamingHeadphones>().ToList();
         }
+=======
+       
+
+>>>>>>> 1bfc197c3e0344d4358791fd63677fb1c9271785
 
 
 
